@@ -133,3 +133,123 @@ git commit
 git checkout bugFix
 git rebase main
 ```
+
+#### level rampup1
+
+```bash
+git checkout C4
+```
+
+#### level rampup2
+
+```bash
+git checkout bugFix^
+```
+
+#### level rampup3
+
+```bash
+git branch -f main C6
+git checkout C1
+git branch -f bugFix HEAD~1
+```
+
+#### level rampup4
+
+```bash
+git reset HEAD~1
+git revert C2
+```
+
+#### level move1
+
+```bash
+git cherry-pick C3 C4 C7
+```
+
+#### level move2
+
+```bash
+git rebase -i overHere
+```
+
+#### level move3
+
+```bash
+git add app.js
+git commit
+git add styles.css
+git commit
+```
+
+#### level move4
+
+```bash
+git restore --staged secret.env
+git restore experiment.js
+git commit
+```
+
+#### level mixed1
+
+```bash
+git rebase -i main
+git branch -f main bugFix
+```
+
+#### level mixed2
+
+```bash
+git rebase -i main
+git commit --amend
+git rebase -i main
+git branch -f main caption
+```
+
+#### level mixed3
+
+```bash
+git checkout main
+git cherry-pick C2
+git branch -f main HEAD~1
+git cherry-pick C2 C3
+```
+
+#### level mixed4
+
+```bash
+git tag v0 C1
+git tag v1 C2
+git checkout v1
+```
+
+#### level mixed5
+
+```bash
+git commit
+```
+
+#### level advanced1
+
+```bash
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git branch -f main HEAD
+```
+
+#### level advanced2
+
+```bash
+git branch bugWork HEAD~^2~
+```
+
+#### level advanced3
+
+```bash
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git branch -f three main~3
+```
