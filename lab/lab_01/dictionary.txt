@@ -66537,9 +66537,9 @@ exhibitive
 exhibitively
 exhibitor
 exhibitorial
-exhibitorship
+exhibitorship    
 exhibitory
-exhilarant
+exhilarant 
 exhilarate
 exhilarating
 exhilaratingly
@@ -66578,7 +66578,7 @@ exiledom
 exilement
 exiler
 exilian
-exilic
+	  exilic
 exility
 eximious
 eximiously
@@ -66589,10 +66589,10 @@ exindusiate
 exinguinal
 exist
 existability
-existence
+	existence
 existent
 existential
-existentialism
+ 	existentialism
 existentialist
 existentialistic
 existentialize
@@ -66667,7 +66667,7 @@ exogastritis
 exogen
 Exogenae
 exogenetic
-exogenic
+ exogenic
 exogenous
 exogenously
 exogeny
@@ -66700,7 +66700,7 @@ exopathic
 exoperidium
 exophagous
 exophagy
-exophasia
+exophasia 		
 exophasic
 exophoria
 exophoric
@@ -66718,7 +66718,7 @@ exorability
 exorable
 exorableness
 exorbital
-exorbitance
+exorbitance 		
 exorbitancy
 exorbitant
 exorbitantly
@@ -66729,7 +66729,7 @@ exorcise
 exorcisement
 exorciser
 exorcism
-exorcismal
+exorcismal						
 exorcisory
 exorcist
 exorcistic
@@ -66739,7 +66739,7 @@ exordial
 exordium
 exordize
 exorganic
-exorhason
+exorhason  
 exormia
 exornation
 exosepsis
@@ -66759,7 +66759,7 @@ exostome
 exostosed
 exostosis
 exostotic
-exostra
+  exostra
 exostracism
 exostracize
 exoteric
@@ -66787,7 +66787,7 @@ exotoxic
 exotoxin
 exotropia
 exotropic
-exotropism
+                                                                        exotropism
 expalpate
 expand
 expanded
@@ -66829,14 +66829,14 @@ expectancy
 expectant
 expectantly
 expectation
-expectative
+				expectative
 expectedly
 expecter
 expectingly
 expective
 expectorant
 expectorate
-expectoration
+expectoration      
 expectorative
 expectorator
 expede
@@ -66856,7 +66856,7 @@ expeditely
 expediteness
 expediter
 expedition
-expeditionary
+expeditionary				
 expeditionist
 expeditious
 expeditiously
@@ -71285,8 +71285,7 @@ floutingly
 flow
 flowable
 flowage
-flower
-flowerage
+flower flowerage
 flowered
 flowerer
 floweret
@@ -71297,16 +71296,14 @@ flowering
 flowerist
 flowerless
 flowerlessness
-flowerlet
-flowerlike
+flowerlet flowerlike
 flowerpecker
 flowerpot
 flowerwork
 flowery
 flowing
 flowingly
-flowingness
-flowmanostat
+flowingness	flowmanostat
 flowmeter
 flown
 flowoff
@@ -71475,8 +71472,7 @@ fluotitanate
 fluotitanic
 fluozirconic
 flurn
-flurr
-flurried
+flurr	flurried
 flurriedly
 flurriment
 flurry
@@ -92706,6 +92702,7 @@ incandescence
 incandescency
 incandescent
 incandescently
+
 incanous
 incantation
 incantational
@@ -92763,8 +92760,11 @@ incense
 incenseless
 incensement
 incensory
-incensurable
+incensurable 
 incensurably
+
+
+
 incenter
 incentive
 incentively
@@ -92816,12 +92816,12 @@ incipient
 incipiently
 incircumscription
 incircumspect
-incircumspection
+    incircumspection
 incircumspectly
 incircumspectness
 incisal
 incise
-incisely
+	incisely
 incisiform
 incision
 incisive
@@ -92830,7 +92830,7 @@ incisiveness
 incisor
 incisorial
 incisory
-incisure
+incisure   	
 incitability
 incitable
 incitant
@@ -92849,7 +92849,7 @@ inclemency
 inclement
 inclemently
 inclementness
-inclinable
+inclinable 	
 inclinableness
 inclination
 inclinational
@@ -92888,17 +92888,17 @@ incogitancy
 incogitant
 incogitantly
 incogitative
-incognita
+incognita      		
 incognitive
 incognito
 incognizability
 incognizable
 incognizance
 incognizant
-incognoscent
+incognoscent          		
 incognoscibility
 incognoscible
-incoherence
+incoherence		
 incoherency
 incoherent
 incoherentific
@@ -139385,7 +139385,7 @@ parchmenter
 parchmentize
 parchmentlike
 parchmenty
-parchy
+            parchy
 parcidentate
 parciloquy
 parclose
@@ -139536,7 +139536,7 @@ parine
 paring
 paripinnate
 Paris
-parish
+		parish
 parished
 parishen
 parishional
@@ -152348,6 +152348,7 @@ pragmatizer
 prairie
 prairiecraft
 prairied
+
 prairiedom
 prairielike
 prairieweed
@@ -152427,7 +152428,7 @@ prater
 pratey
 pratfall
 pratiloma
-Pratincola
+		Pratincola  
 pratincole
 pratincoline
 pratincolous
@@ -152442,7 +152443,7 @@ prattlement
 prattler
 prattling
 prattlingly
-prattly
+  prattly	  
 prau
 Pravin
 pravity
@@ -152467,6 +152468,7 @@ prayerlessness
 prayermaker
 prayermaking
 prayerwise
+
 prayful
 praying
 prayingly
@@ -152499,6 +152501,9 @@ preaccumulate
 preaccumulation
 preaccusation
 preaccuse
+
+
+
 preaccustom
 preaccustomed
 preacetabular
@@ -231693,7 +231698,7 @@ whencesoeer
 whencesoever
 whencever
 wheneer
-whenever
+
 whenness
 whenso
 whensoever
@@ -231733,7 +231738,7 @@ whereuntil
 whereunto
 whereup
 whereupon
-wherever
+wherever    	 whenever
 wherewith
 wherewithal
 wherret
@@ -235370,7 +235375,7 @@ zoarium
 zobo
 zobtenite
 zocco
-zoccolo
+
 zodiac
 zodiacal
 zodiophilous
@@ -235540,7 +235545,7 @@ zoologicoarchaeologist
 zoologicobotanical
 zoologist
 zoologize
-zoology
+zoology 	zygomorphous
 zoom
 zoomagnetic
 zoomagnetism
@@ -235639,16 +235644,16 @@ zoosis
 zoosmosis
 zoosperm
 zoospermatic
-zoospermia
+	zoospermia                		
 zoospermium
 zoosphere
 zoosporange
-zoosporangia
+zoosporangia zoccolo
 zoosporangial
 zoosporangiophore
 zoosporangium
 zoospore
-zoosporic
+		zoosporic 		
 zoosporiferous
 zoosporocyst
 zoosporous
@@ -235671,7 +235676,7 @@ zootomic
 zootomical
 zootomically
 zootomist
-zootomy
+zootomy     
 zoototemism
 zootoxin
 zootrophic
@@ -235690,11 +235695,11 @@ zorgite
 zoril
 zorilla
 Zorillinae
-zorillo
+zorillo          
 Zoroastrian
 Zoroastrianism
 Zoroastrism
-Zorotypus
+                Zorotypus           
 zorrillo
 zorro
 Zosma
@@ -235712,7 +235717,7 @@ Zubeneschamali
 zuccarino
 zucchetto
 zucchini
-zudda
+			zudda
 zugtierlast
 zugtierlaster
 zuisin
@@ -235781,7 +235786,7 @@ zygomaticoauricularis
 zygomaticofacial
 zygomaticofrontal
 zygomaticomaxillary
-zygomaticoorbital
+zygomaticoorbital 
 zygomaticosphenoid
 zygomaticotemporal
 zygomaticum
@@ -235790,7 +235795,6 @@ zygomaxillare
 zygomaxillary
 zygomorphic
 zygomorphism
-zygomorphous
 zygomycete
 Zygomycetes
 zygomycetous
