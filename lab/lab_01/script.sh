@@ -19,7 +19,7 @@ themes | sort -u > "$DIR/research_themes.txt"
 wc -l < "$DIR/research_themes.txt" >> "$DIR/research_themes.txt"
 
 echo "3. Creating medium_groups.txt..."
-themes | sort | uniq -c | awk '$1 >= 6 && $1 <= 10 { $1 = ""; print }' | sed 's/^ //' > "$DIR/medium_groups.txt"
+themes | sort | uniq -c | awk '$1 > 6 && $1 < 10 { $1 = ""; print }' | sed 's/^ //' > "$DIR/medium_groups.txt"
 
 echo "4. Creating joined.csv..."
 grep 'Computer Security' "$INPUT" | grep 'Philosophy' | grep 'Biomedicine' > "$DIR/joined.csv"
