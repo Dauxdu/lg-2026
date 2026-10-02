@@ -14,7 +14,7 @@ names() {
 
 echo "-----------------------------------"
 echo "1. Ensuring data_analysis directory exists..."
-mkdir -p "$DIR"
+rm -rf "$DIR" && mkdir "$DIR"
 
 echo "2. Creating research_themes.txt..."
 themes | sort -u > "$DIR/research_themes.txt"
