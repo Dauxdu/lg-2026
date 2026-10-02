@@ -2,12 +2,14 @@
 DIR="data_analysis"
 INPUT="faculty.csv"
 
+TRIM_SPACE='s/^[[:space:]]*//; s/[[:space:]]*$//'
+
 themes() {
-    cut -d',' -f3 "$INPUT" | tr '+' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$'
+    cut -d',' -f3 "$INPUT" | tr '+' '\n' | sed "$TRIM_SPACE" | grep -v '^$'
 }
 
 names() {
-    cut -d',' -f1 "$INPUT" | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$'
+    cut -d',' -f1 "$INPUT" | sed "$TRIM_SPACE" | grep -v '^$'
 }
 
 echo "-----------------------------------"
@@ -26,3 +28,6 @@ grep 'Computer Security' "$INPUT" | grep 'Philosophy' | grep 'Biomedicine' > "$D
 
 echo "5. Creating sorted_names.txt..."
 names | sort -k 2,2 -k 1,1 > "$DIR/sorted_names.txt"
+
+echo "-----------------------------------"
+echo "Done"
