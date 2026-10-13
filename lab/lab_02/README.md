@@ -15,6 +15,8 @@ MY_LOCAL_VAR="local_var_value"
 ```
 
 ```bash
+echo "$MY_LOCAL_VAR"
+# or
 env | grep MY_LOCAL_VAR
 # or
 env | grep local_var_value
@@ -27,6 +29,8 @@ echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
 ```
 
 ```bash
+echo "$MY_SHELL_VAR"
+# or
 env | grep MY_SHELL_VAR
 # or
 env | grep shell_var_value
@@ -60,7 +64,6 @@ echo "test_text" > new_group_dir/test_file.txt
 ```bash
 chmod 770 new_group_dir/test_file.txt
 sudo chown root:new_group new_group_dir/test_file.txt
-ls -lh new_group_dir/test_file.txt
 ```
 
 ### 4. Попробуйте записать новую информацию в файл. Добавьте текущего пользователя в группу new_group и добавьте в конец файла строку "User currently in the group".
@@ -85,6 +88,7 @@ cat new_group_dir/test_file.txt
 
 ```bash
 sudo ln -s "$PWD/new_group_dir/test_file.txt" /usr/local/bin/tf
+sudo chmod 700 "$PWD/new_group_dir/test_file.txt"
 sudo chown root "$PWD/new_group_dir/test_file.txt"
 ```
 
@@ -128,10 +132,14 @@ tmux new-session -d -s session2
 
 tmux send-keys -t session1 'cat' Enter
 tmux send-keys -t session2 'echo "the second session"' Enter
+
+tmux ls
 ```
 
 ```bash
 tmux attach -t session1
+# or
+tmux a # last session
 ```
 
 Отключиться от сессии `Ctrl + B + D`
