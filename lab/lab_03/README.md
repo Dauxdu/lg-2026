@@ -36,6 +36,8 @@ git log
 
 ```bash
 git checkout HEAD~1
+# or
+git switch --detach HEAD~1
 cat text.txt
 git switch master
 ```
@@ -60,7 +62,7 @@ git switch -c slave
 ### 2. Измените текущую ветку.
 
 ```bash
-git checkout slave
+git switch slave
 ```
 
 ### 3. Измените файл и выполните коммит на каждой из веток.
