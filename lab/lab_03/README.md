@@ -255,3 +255,64 @@ git checkout two
 git cherry-pick C5 C4 C3 C2
 git branch -f three main~3
 ```
+
+#### level remote1
+
+```bash
+git clone
+```
+
+#### level remote2
+
+```bash
+git commit
+git switch o/main
+git commit
+```
+
+#### level remote3
+
+```bash
+git fetch
+```
+
+#### level remote4
+
+```bash
+git pull
+```
+
+#### level remote5
+
+```bash
+git clone
+git fakeTeamwork main 2
+git commit
+git pull
+```
+
+#### level remote6
+
+```bash
+git commit
+git commit
+git push
+```
+
+#### level remote7
+
+```bash
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+```
+
+#### level remote8
+
+```bash
+git switch -c feature
+git branch -f main C1
+git push origin feature
+```
