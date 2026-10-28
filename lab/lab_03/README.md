@@ -160,6 +160,7 @@ git branch -f bugFix HEAD~1
 
 ```bash
 git reset HEAD~1
+git switch pushed
 git revert C2
 ```
 
