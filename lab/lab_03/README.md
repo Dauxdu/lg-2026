@@ -34,6 +34,8 @@ git log
 
 ### 4. Выполните откат изменений и вернитесь к предыдущему коммиту. Просмотрите файл и убедитесь, что перед вами его предыдущая версия.
 
+Просмотр предыдущей версии:
+
 ```bash
 git checkout HEAD~1
 # or
@@ -42,11 +44,18 @@ cat text.txt
 git switch master
 ```
 
+Откат изменений:
+
+```bash
+git revert HEAD
+cat text.txt
+```
+
 ### 5. Сравните две версии файла и изучите вашу историю коммитов.
 
 ```bash
 git diff HEAD~1 HEAD
-git log
+git log --oneline
 ```
 
 ## Задание 2. Базовые навыки работы с ветками git.
@@ -122,7 +131,7 @@ git checkout -b bugFix
 git commit
 git checkout main
 git commit
-git marge bugFix
+git merge bugFix
 ```
 
 #### level intro4
@@ -161,7 +170,7 @@ git branch -f bugFix HEAD~1
 ```bash
 git reset HEAD~1
 git switch pushed
-git revert C2
+git revert HEAD
 ```
 
 #### level move1
@@ -175,6 +184,8 @@ git cherry-pick C3 C4 C7
 ```bash
 git rebase -i overHere
 ```
+
+В окне rebase: удалить C2, порядок коммитов C3, C5, C4.
 
 #### level move3
 
@@ -200,6 +211,8 @@ git rebase -i main
 git branch -f main bugFix
 ```
 
+В окне rebase: оставить только C4.
+
 #### level mixed2
 
 ```bash
@@ -209,13 +222,15 @@ git rebase -i main
 git branch -f main caption
 ```
 
+В первом окне rebase: порядок C3, C2. Во втором: порядок C2'', C3'.
+
 #### level mixed3
 
 ```bash
 git checkout main
 git cherry-pick C2
-git branch -f main HEAD~1
-git cherry-pick C2 C3
+git commit --amend
+git cherry-pick C3
 ```
 
 #### level mixed4
