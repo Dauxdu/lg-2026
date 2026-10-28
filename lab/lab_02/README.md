@@ -14,32 +14,38 @@ set
 MY_LOCAL_VAR="local_var_value"
 ```
 
+В текущем окне:
+
 ```bash
 echo "$MY_LOCAL_VAR"
-# or
-env | grep MY_LOCAL_VAR
-# or
-env | grep local_var_value
 ```
+
+В новом окне терминала переменная отсутствует, так как локальная переменная существует только в той оболочке, где была создана:
 
 ### 3. Используя конфигурационный файл .bashrc создайте переменную оболочки с именем MY_SHELL_VAR и значением равным “shell_var_value”. Убедитесь, что она доступна в любом окне терминала.
 
 ```bash
 echo 'MY_SHELL_VAR="shell_var_value"' >> ~/.bashrc
+source ~/.bashrc
 ```
+
+В любом новом окне терминала:
 
 ```bash
 echo "$MY_SHELL_VAR"
-# or
-env | grep MY_SHELL_VAR
-# or
-env | grep shell_var_value
 ```
 
 ### 4. Используя файл environment в /etc/environment создайте глобальную переменную MY_GLOBAL_VAR со значением "global_var_value". Проверьте ее доступность в новом окне терминала. Выполните команду python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))' и убедитесь, что вы получили значение переменной.
 
 ```bash
 echo 'MY_GLOBAL_VAR="global_var_value"' | sudo tee -a /etc/environment
+```
+
+Файл `/etc/environment` читается при входе в систему, поэтому нужно перезайти в систему (или перезагрузиться). Затем в новом окне терминала:
+
+```bash
+echo "$MY_GLOBAL_VAR"
+python3 -c 'import os; print(os.getenv("MY_GLOBAL_VAR"))'
 ```
 
 ## Задание 2. Пользователи, группы и права доступа.
@@ -64,6 +70,7 @@ echo "test_text" > new_group_dir/test_file.txt
 ```bash
 chmod 770 new_group_dir/test_file.txt
 sudo chown root:new_group new_group_dir/test_file.txt
+ls -lh new_group_dir/test_file.txt
 ```
 
 ### 4. Попробуйте записать новую информацию в файл. Добавьте текущего пользователя в группу new_group и добавьте в конец файла строку "User currently in the group".
@@ -88,8 +95,14 @@ cat new_group_dir/test_file.txt
 
 ```bash
 sudo ln -s "$PWD/new_group_dir/test_file.txt" /usr/local/bin/tf
-sudo chmod 700 "$PWD/new_group_dir/test_file.txt"
-sudo chown root "$PWD/new_group_dir/test_file.txt"
+sudo chmod 700 /usr/local/bin/tf
+sudo chown root /usr/local/bin/tf
+ls -l /usr/local/bin/tf
+```
+
+```bash
+cat /usr/local/bin/tf
+cat new_group_dir/test_file.txt
 ```
 
 ### 2. Создайте сокращение lr, которое будет эквивалентно выполнению в терминале команды ls -l. Проверьте работу сокращения. Закройте текущее окно терминала и попробуйте применить сокращение снова. Используя конфигурационный файл .bashrc обеспечьте возможность выполнения сокращенной команды для любого окна терминала.
@@ -99,8 +112,12 @@ alias lr='ls -l'
 lr
 ```
 
+После закрытия окна и открытия нового сокращение не работает: `lr: command not found`.
+
 ```bash
 echo "alias lr='ls -l'" >> ~/.bashrc
+source ~/.bashrc
+lr
 ```
 
 ## Задание 4. Управление процессами. Мультиплексоры.
@@ -108,17 +125,22 @@ echo "alias lr='ls -l'" >> ~/.bashrc
 ### 1. Просмотрите список активных задач. Запустите произвольную задачу в фоновом режиме. Отложите выполнение произвольной задачи, а затем возобновите ее с передачей управления над ней на активный терминал.
 
 ```bash
-jobs
-sleep 1000 & traceroute ssau.ru
+ps
+```
+
+```bash
+sleep 120
+traceroute ssau.ru
 ```
 
 Приостановка процесса: `Ctrl + Z`
 
 ```bash
-fg
+jobs
+fg %2
 ```
 
-Завершение процесса `Ctrl + C`
+Завершение процесса: `Ctrl + C`
 
 ### 2. Используя tmux создайте две новые сессии. В первой выполните команду cat, а во второй echo "the second session". Подключитесь к первой сессии и остановите задачу cat. Отключитесь от сессии и завершите ее. Закройте окно терминала. Открыв новое окно терминала подключитесь ко второй сессии и выполните произвольную команду.
 
@@ -142,9 +164,11 @@ tmux attach -t session1
 tmux a # last session
 ```
 
-Отключиться от сессии `Ctrl + B + D`
+Остановить задачу `cat`: `Ctrl + C`
 
-Завершить сессию от сессии `Ctrl + D`
+Отключиться от сессии: `Ctrl + B`, затем `D`
+
+Завершить сессию:
 
 ```bash
 tmux kill-session -t session1
