@@ -59,7 +59,7 @@ groups
 ### 2. Создайте группу “new_group” с произвольным паролем, новую директорию и файл test_file.txt внутри этой директории, содержащий произвольную информацию.
 
 ```bash
-sudo groupadd -p new_group
+sudo groupadd -p "P@ssw0rd!" new_group
 mkdir -p new_group_dir
 echo "test_text" > new_group_dir/test_file.txt
 ```
