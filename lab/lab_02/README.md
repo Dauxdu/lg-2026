@@ -59,8 +59,7 @@ groups
 ### 2. Создайте группу “new_group” с произвольным паролем, новую директорию и файл test_file.txt внутри этой директории, содержащий произвольную информацию.
 
 ```bash
-sudo groupadd new_group
-sudo gpasswd new_group
+sudo groupadd -p new_group
 mkdir -p new_group_dir
 echo "test_text" > new_group_dir/test_file.txt
 ```
@@ -129,18 +128,15 @@ ps
 ```
 
 ```bash
-sleep 120
-traceroute ssau.ru
+sleep 1200&
 ```
-
-Приостановка процесса: `Ctrl + Z`
 
 ```bash
 jobs
-fg %2
+kill -s SIGSTOP %1
+kill -s SIGCONT %1
+kill -s SIGTERM %1
 ```
-
-Завершение процесса: `Ctrl + C`
 
 ### 2. Используя tmux создайте две новые сессии. В первой выполните команду cat, а во второй echo "the second session". Подключитесь к первой сессии и остановите задачу cat. Отключитесь от сессии и завершите ее. Закройте окно терминала. Открыв новое окно терминала подключитесь ко второй сессии и выполните произвольную команду.
 
